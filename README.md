@@ -45,7 +45,7 @@ NewStockTrading
 Clone repository:
 
 ```bash
-git clone https://github.com/omwani2005/new-stock-trading
+git clone YOUR_REPO_URL
 ```
 
 Install dependencies:
@@ -86,8 +86,8 @@ npm run dev
 Create `.env`
 
 ```env
-MONGO_URL=mongodb+srv://omwani0123_db_user:Omwani123@zerodhaclonecluster.ulrk7xo.mongodb.net/zerodha?appName=ZerodhaCloneCluster
-JWT_SECRET=ZERODHA_JWT_SECRET
+MONGO_URL=YOUR_MONGO_URL
+JWT_SECRET=YOUR_SECRET
 PORT=3002
 ```
 
@@ -96,6 +96,7 @@ PORT=3002
 - Live stock prices
 - Order history
 - Better portfolio analytics
+
 
 ## Author
 
