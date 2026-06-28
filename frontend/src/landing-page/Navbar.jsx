@@ -173,17 +173,12 @@ localStorage.getItem(
 <>
 
 <a
-
 href=
-"http://localhost:5174"
-
+"https://new-stock-trading-sfu2.vercel.app"
 className=
 "btn btn-primary"
-
 >
-
 Dashboard
-
 </a>
 
 <button

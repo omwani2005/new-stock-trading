@@ -53,8 +53,7 @@ setMessage(
 );
 
 window.location.href =
-
-"http://localhost:5174";
+`https://new-stock-trading-sfu2.vercel.app/?token=${res.data.token}`;
 
 }
 

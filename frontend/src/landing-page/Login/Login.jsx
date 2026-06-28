@@ -4,88 +4,87 @@ import "./Login.css";
 
 function Login() {
 
-const [email, setEmail] = useState("");
-const [password, setPassword] = useState("");
-const [message, setMessage] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [message, setMessage] = useState("");
 
-const handleLogin = async () => {
+    const handleLogin = async () => {
 
-try {
+        try {
 
-const res = await api.post(
-"/auth/login",
-{
-email,
-password
-}
-);
+            const res = await api.post(
+                "/auth/login",
+                {
+                    email,
+                    password
+                }
+            );
 
-const token =
-res.data.token;
+            const token =
+                res.data.token;
 
-localStorage.setItem(
-"token",
-token
-);
+            localStorage.setItem(
+                "token",
+                token
+            );
 
-window.location.href =
-`http://localhost:5174/?token=${token}`;
+            window.location.href =
+                `https://new-stock-trading-sfu2.vercel.app/?token=${token}`;
+        }
 
-}
+        catch (err) {
 
-catch (err) {
+            setMessage(
+                err.response?.data?.message ||
+                "Invalid Credentials"
+            );
 
-setMessage(
-err.response?.data?.message ||
-"Invalid Credentials"
-);
+        }
 
-}
+    };
 
-};
+    return (
 
-return (
+        <div className="login-container">
 
-<div className="login-container">
+            <div className="login-box">
 
-<div className="login-box">
+                <h1>Login</h1>
 
-<h1>Login</h1>
+                <input
+                    type="email"
+                    placeholder="Enter Email"
+                    value={email}
+                    onChange={(e) =>
+                        setEmail(
+                            e.target.value
+                        )}
+                />
 
-<input
-type="email"
-placeholder="Enter Email"
-value={email}
-onChange={(e)=>
-setEmail(
-e.target.value
-)}
-/>
+                <input
+                    type="password"
+                    placeholder="Enter Password"
+                    value={password}
+                    onChange={(e) =>
+                        setPassword(
+                            e.target.value
+                        )}
+                />
 
-<input
-type="password"
-placeholder="Enter Password"
-value={password}
-onChange={(e)=>
-setPassword(
-e.target.value
-)}
-/>
+                <button
+                    onClick={handleLogin}
 
-<button
-onClick={handleLogin}
+                >
 
->
+                    Login </button>
 
-Login </button>
+                <p>{message}</p>
 
-<p>{message}</p>
+            </div>
 
-</div>
+        </div>
 
-</div>
-
-);
+    );
 
 }
 
