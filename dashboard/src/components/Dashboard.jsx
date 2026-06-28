@@ -27,9 +27,17 @@ const Dashboard = () => {
             try {
 
                 await api.get(
-                    "/auth/verify"
+                    "/auth/verify",
+                    {
+                        headers: {
+                            Authorization:
+                                `Bearer ${localStorage.getItem(
+                                    "token"
+                                )
+                                }`
+                        }
+                    }
                 );
-
             }
 
             catch {
