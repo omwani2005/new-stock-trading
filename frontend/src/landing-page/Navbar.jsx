@@ -174,7 +174,7 @@ localStorage.getItem(
 
 <a
 href=
-"https://new-stock-trading-sfu2.vercel.app"
+"https://new-stock-trading-sfu2.vercel.app/"
 className=
 "btn btn-primary"
 >
