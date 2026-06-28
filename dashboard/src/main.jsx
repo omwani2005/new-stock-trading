@@ -44,7 +44,7 @@ localStorage.getItem(
 if(!token){
 
 window.location.href =
-"http://localhost:5173/login";
+"https://new-stock-trading.vercel.app/login";
 
 }else{
 

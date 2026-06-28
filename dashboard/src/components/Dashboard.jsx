@@ -39,7 +39,7 @@ const Dashboard = () => {
                 );
 
                 window.location.href =
-                    "http://localhost:5173/Signup";
+                    "https://new-stock-trading.vercel.app/signup";
 
             }
 

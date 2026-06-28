@@ -30,8 +30,8 @@ const Menu = () => {
       "token"
     );
 
-    window.location.href =
-      "http://localhost:5173/login";
+   window.location.href =
+"https://new-stock-trading.vercel.app/login";
 
   };
 
